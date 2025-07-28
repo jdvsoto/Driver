@@ -10,9 +10,11 @@ public class Ticket {
     // Constructor para inicializar los atributos
     public Ticket() {
         Random random = new Random();
-        this.numeroTicket = random.nextInt(1500) + 1;
-        this.a = random.nextInt(100) + 1;
-        this.b = random.nextInt(100) + 1;
+        this.numeroTicket = random.nextInt(9) + 1;
+        do {
+            this.a = random.nextInt(9) + 1;
+            this.b = random.nextInt(9) + 1;
+        } while (this.a >= this.b);
     }
 
     public boolean esValido() {
@@ -23,5 +25,13 @@ public class Ticket {
 
     public int getNumeroTicket() {
         return numeroTicket;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
     }
 }

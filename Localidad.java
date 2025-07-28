@@ -7,9 +7,9 @@ public class Localidad {
     private int boletosVendidos;
 
     // Constructor para inicializar los atributos
-    public Localidad(String nombre, double precioo) {
+    public Localidad(String nombre, double precio) {
         this.nombre = nombre;
-        this.precio = precioo;
+        this.precio = precio;
         this.capacidadMaxima = 20;
         this.boletosVendidos = 0;
     }
